@@ -49,7 +49,7 @@ deleteVehicle _bomb;
 
 for "_i" from 1 to 50 do {
 	_explo = "G_40mm_HEDP" createVehicle _pos;
-	_explo setVelocity [-35 + (random 70), -35 + (random 70), -50];
+	_explo setVelocity [-20 + (random 40), -20 + (random 40), -35];
 	sleep 0.025;
 };
 
