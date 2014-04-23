@@ -11,7 +11,7 @@ INS_CAS_removeMenuItems = {
 	player removeAction HELI_ACTION_ID;
 	player removeAction CAS_CANCEL_ID;
 
-	CAS_ACTION_ID = player addAction ["<t color='#6775cf'>Request CAS</t>", "cas\casMenu.sqf", nil, 1.5, false, false, "", "'ItemGPS' in (assignedItems _this) and 'ItemRadio' in (assignedItems _this) and !INS_CAS_waitCAS"];
+	CAS_ACTION_ID = player addAction ["<t color='#6775cf'>Request CAS</t>", "cas\casMenu.sqf", nil, 1.5, false, false, "", "'ItemGPS' in (assignedItems _this) and 'ItemRadio' in (assignedItems _this) and !INS_CAS_waitCAS and call INS_CAS_canCallCAS"];
 };
 
 _folderpath = "cas\functions\cas_pick_target.sqf";
