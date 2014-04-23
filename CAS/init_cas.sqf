@@ -10,7 +10,7 @@ if (isNil "INS_CAS_waitCAS") then { INS_CAS_waitCAS = false; };
 if (isNil "timeUntilNextCAS") then { timeUntilNextCAS = 0; publicVariable "timeUntilNextCAS"; };
 
 INS_CAS_canCallCAS = {
-	_can_call = true;
+	_can_call = false;
 	switch (side player) do {
 		case west: { 
 			if (casNumRequestsBLUFOR > 0) then { _can_call = true; } 
