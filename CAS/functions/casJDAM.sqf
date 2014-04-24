@@ -14,7 +14,8 @@ _pilot = [getPos _plane] call INS_CAS_spawnPilot;
 [_plane, _targetLoc] call INS_CAS_notifyETA;
 
 while {true} do {
-	if (_plane distance _targetLoc <= 660) exitwith {};
+	_planeLoc = getPos _plane;
+	if ([_planeLoc select 0, _planeLoc select 1, 0] distance _targetLoc <= 660) exitwith {};
 	if (!alive _plane) exitwith {};
 	if (INS_CAS_abortCAS) exitWith {};
 

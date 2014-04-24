@@ -40,7 +40,7 @@ INS_CAS_spawnAircraft = {
 	_position = _this select 1;
 	_target = _this select 2;
 
-	_vehicle = createVehicle [_type, _position, [], 0, "FLY"];
+	_vehicle = createVehicle [_type, [_position select 0, _position select 1, 1000], [], 0, "FLY"];
 	_vehicle setVectorDir [(_target select 0) - (getPos _vehicle select 0), (_target select 1) - (getPos _vehicle select 1), 0];
 	sleep 0.2;
 
@@ -56,7 +56,7 @@ INS_CAS_initPlane = {
 	_pilot = _this select 1;
 
 	_pilot moveInDriver _plane;
-	_plane flyInheight 260;
+	_plane flyInheight 1000;
 };
 
 INS_CAS_notifyETA = {
