@@ -94,7 +94,7 @@ if (isServer) then { // server loop
 				_veh setVariable ["RES_ABANDON_LISTEN", _abandonedListen];
 
 				if (_abandon and _abandonedTime > _abandonedRespawnDelay) then { _abandoned = true; _respawn = true; };
-				if (_abandonedListen and _abandonedTime > (_abandonedRespawnDelay - 60) and _abandonWarn and (count crew _veh == 0)) then { [format["<t color='#ff6347'>%1</t> will respawn in %2 seconds", _name, _abandonedRespawnDelay - _abandonedTime], "respawnMessage", true] spawn BIS_fnc_MP; _abandonWarn = false; };
+				if (_abandonedListen and _abandonedTime > (_abandonedRespawnDelay - 60) and _abandonWarn and (count crew _veh == 0)) then { [format["<t color='#ff6347'>%1</t> will respawn in %2 seconds", _name, _abandonedRespawnDelay - _abandonedTime], true, true] call dl_fnc_hintMP; _abandonWarn = false; };
 				_veh setVariable ["RES_ABANDON_WARN", _abandonWarn];
 
 				if (!alive _veh) then { _respawn = true; sleep _destroyedRespawnDelay; };
