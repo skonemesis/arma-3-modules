@@ -126,7 +126,7 @@ if (isServer) then { // server loop
 	};
 };
 
-/ ---------------------------------------
+// ---------------------------------------
 //	helper functions - add to some functions file or leave here
 // ---------------------------------------
 
